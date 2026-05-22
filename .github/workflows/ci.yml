@@ -45,7 +45,7 @@ jobs:
         mkdir -p release
         cp build/lsfg-vk-layer/liblsfg-vk-layer.so release/liblsfg-vk-arm64.so
         cp dist/VkLayer_LSFGVK_frame_generation.json release/
-        tar -czf lsfg-vk-arm64.tar.gz -C release .
+        tar -czf lsfg-vk-arm64.tar.gz -C release liblsfg-vk-arm64.so VkLayer_LSFGVK_frame_generation.json
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
